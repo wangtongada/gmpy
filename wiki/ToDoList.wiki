@@ -1,0 +1,19 @@
+#summary Gotchas, issues, and todo list.
+
+==Todo List==
+
+MPFR support is not thread-safe.
+
+The display of mpfr object during an interactive session should be tweaked to match the output of __format__(), for some format string. The format string "e" will display the value in engineering format and automatically display all digits. The "g" format string only displays 6 digits by default.
+
+MPC support has been started but isn't yet usable.
+
+A new, modern test suite needs to be written.
+
+Random number support needs to be added.
+
+__format__() still needs to be added to mpq.
+
+==Gotchas==
+
+`sqrt()` will return an integer result if given an integer argument. Should sqrt() always return an mpfr() and then add isqrt() to return an mpz()?
