@@ -15,5 +15,3 @@ Random number support needs to be added.
 __format__() still needs to be added to mpq.
 
 ==Gotchas==
-
-`sqrt()` will return an integer result if given an integer argument. Should sqrt() always return an mpfr() and then add isqrt() to return an mpz()?
