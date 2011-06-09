@@ -13,3 +13,5 @@ Random number support needs to be added.
 __format__() still needs to be added to mpq.
 
 ==Gotchas==
+
+If you enable trap_erange, you will get an exception when you compare against "nan". However, you can still use mpfr("nan") as a key in a dictionary but you get the exception when you try to access the dictionary by that key (and probably any number that hashes to the same value).
