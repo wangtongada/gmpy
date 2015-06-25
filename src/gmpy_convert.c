@@ -428,7 +428,7 @@ mpz_ascii(mpz_t z, int base, int option)
      *                                  -----
      *                                   10
      */
-    size = mpz_sizeinbase(z, base) + 11;
+    size = mpz_sizeinbase(z, (base < 0 ? -base : base)) + 11;
     TEMP_ALLOC(buffer, size);
 
     if (mpz_sgn(z) < 0) {
