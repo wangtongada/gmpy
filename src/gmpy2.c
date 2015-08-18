@@ -351,6 +351,9 @@
  *   2.0.6
  *   Fix setup.py to not override --prefix (casevh)
  *
+ *   2.0.7
+ *   Fix math.floor(gmpy2.mpfr('inf')) to not segfault (casevh)
+ *
  ************************************************************************
  *
  * Discussion on sizes of C integer types.
@@ -420,7 +423,7 @@
 
 /* The following global strings are used by gmpy_misc.c. */
 
-char gmpy_version[] = "2.0.6";
+char gmpy_version[] = "2.0.7";
 
 char _gmpy_cvs[] = "$Id$";
 
@@ -869,7 +872,7 @@ _PyInitGMP(void)
 }
 
 static char _gmpy_docs[] =
-"gmpy2 2.0.6 - General Multiple-precision arithmetic for Python\n"
+"gmpy2 2.0.7 - General Multiple-precision arithmetic for Python\n"
 "\n"
 "gmpy2 supports several multiple-precision libraries. Integer and\n"
 "rational arithmetic is provided by either the GMP or MPIR libraries.\n"
